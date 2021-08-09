@@ -120,6 +120,10 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 })({"index.ts":[function(require,module,exports) {
 "use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
 function sortM(arr) {
   var i = arr.length - 1;
   var temp;
@@ -176,9 +180,47 @@ function sortC(arr) {
   }
 
   return arr;
+} // 是否为有效的括号
+
+
+function validBrackets(val) {
+  var result = [];
+  var temp = val.split(''); // 奇数立即返回
+
+  if (temp.length % 2 === 1) {
+    return false;
+  }
+
+  temp.forEach(function (item, index) {
+    if (item === '(') {
+      result.push(item);
+    } else {
+      result.pop();
+    }
+  });
+  return result.length === 0;
+} // 多种组合的括号是否为有效的括号
+
+
+function mulValidBrackets(val) {
+  var result = [];
+  var temp = val.split('');
+
+  if (temp.length % 2 === 1) {
+    return false;
+  }
+
+  temp.forEach(function (item) {
+    if (item === '(' || item === '{' || item === '[') {
+      result.push(item);
+    } else if (result[result.length - 1] === '[' && item === ']' || result[result.length - 1] === '{' && item === '}' || result[result.length - 1] === '(' && item === ')') {
+      result.pop();
+    }
+  });
+  return result.length === 0;
 }
 
-sortC([2, 3, 1, 5]);
+console.log(1, mulValidBrackets('([]){}'));
 },{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -207,7 +249,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54449" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61099" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

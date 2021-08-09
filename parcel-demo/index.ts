@@ -1,4 +1,7 @@
 "use strict"
+
+import { resourceLimits } from "worker_threads"
+
 function sortM<T>(arr: T[]):T[]{
   let i = arr.length - 1
   let temp
@@ -47,15 +50,28 @@ function sortC<T>(arr: T[]):T[] {
   return arr
 }
 
-sortC([2, 3, 1, 5])
+// 多种组合的括号是否为有效的括号
+function mulValidBrackets(s: string) :boolean {
+  let result = []
+  let temp = s.split('')
+  if (temp.length % 2 === 1) { return false }
+  for(let i = 0; i < temp.length; i++) {
+    if (temp[i] === '(' || temp[i] === '{' || temp[i] === '[') {
+      result.push(temp[i])
+    }  else if ((result[result.length - 1] === '[' && temp[i] === ']') || 
+    (result[result.length - 1] === '{' && temp[i] === '}') || 
+    (result[result.length - 1] === '(' && temp[i] === ')')) {
+      result.pop()
+    } else {
+      return false
+    }
+  } 
+  return result.length === 0
+}
 
-
-// this实际上是函数被调用时发生的绑定
-
-// 1) 不带任何修饰的函数调用。（严格模式下： 全局环境this绑定到undefined)
-
-// 2) 隐式绑定(隐式绑定丢失)
-
-// 3) 硬绑定（call, apply)
-
-// 4) new绑定
+// 最近(3000) 的请求次数: 利用队列的先入先出
+// [0, 1, 200, 3001, 3002]
+// [null, 1, 2, 3, 3]
+function recentTimes(s: Array<number>) :number {
+  return s.length
+}
