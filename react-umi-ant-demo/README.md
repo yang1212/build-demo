@@ -1,22 +1,9 @@
-# 基于Ant Design Pro + Umi
+### 基于Ant Design Pro + Umi
 
+1、创建文件夹为项目名(mkdir react-umi-ant-demo)
 
-### 新建文件夹  
+2、执行npm create umi
 
-```bash
-npm create umi
-```
+3、选择 ant-design-pro
 
-```bash
-选择 ant-design-pro
-```  
-
-```bash
-npm install
-```  
-
-```bash
-npm start
-```
-
-To DO: plugin-initial-state启动项目时被删除导致项目无法正常启动
+至今没成功，plugin-initial-state启动项目时被删除导致项目无法正常启动~
