@@ -1,4 +1,4 @@
-平时用这个脚手架写demo, 忒方便
+平时用这个脚手架写demo, 忒方便~
 
 ### 1、初始化
 npm init parcel-demo(项目名)
