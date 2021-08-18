@@ -13,7 +13,3 @@ npm install typescript --save-dev
 ### 3、创建文件
 创建index.html, index.js即可使用
 
-
-
-### others
-vsCode中debug调试： 如果debug无法启动，检查下当前Node版本。node 8.xx是启动不了的~
