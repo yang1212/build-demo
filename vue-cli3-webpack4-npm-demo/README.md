@@ -1,5 +1,4 @@
-### 🚀 node版本限制
-node > v8.9
+基于vue-cli3，webpack版本为4.x的demo, node版本要大于v8.9 ~
 
 ### 1、如存在旧版本：卸载掉旧版本  
 
