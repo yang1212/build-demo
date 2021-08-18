@@ -1,4 +1,4 @@
-### 🚀 基于Ant Design Pro + Umi
+### 基于Ant Design Pro + Umi
 
 1、创建文件夹为项目名(mkdir react-umi-ant-demo)
 
