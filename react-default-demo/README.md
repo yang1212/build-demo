@@ -1,4 +1,6 @@
-### 补充基于create-react-app创建项目步骤
+react项目的demo案例，其中react-redux的使用不基于hooks，用的旧模式~
+
+### create-react-app创建步骤
 
 1） 安装create-react-app
 
