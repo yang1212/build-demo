@@ -1,14 +1,17 @@
-### `node版本限制`
-node > v10
+第三方工具基于rollup是个好选择，node版本要大于v10 ~
 
-### `初始化`:
+1、初始化
+````
 npm init
+````
 
-### `安装rollup`:
-
+2、安装rollup
+````
 npm install rollup --save-dev
+````
 
-### `配置`
-
+3、配置
+````
 配置rollup.config.js
+````
 
