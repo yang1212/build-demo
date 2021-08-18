@@ -1,11 +1,4 @@
-
-## 项目启动
-* npm install
-* npm run start
-
-<br/>
-
-## 补充基于create-react-app创建项目步骤
+### 补充基于create-react-app创建项目步骤
 
 1） 安装create-react-app
 
