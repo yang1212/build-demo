@@ -18,8 +18,5 @@ Vue.config.productionTip = false
 new Vue({
   el: '#app',
   router,
-  render: h => h(App),
-  mounted () {
-    document.dispatchEvent(new Event('render-event'))
-  }
+  render: h => h(App)
 })
