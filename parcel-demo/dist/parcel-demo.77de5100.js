@@ -120,31 +120,6 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 })({"index.ts":[function(require,module,exports) {
 "use strict";
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-function sortM(arr) {
-  var i = arr.length - 1;
-  var temp;
-
-  while (i > 0) {
-    for (var j = 0; j < i; j++) {
-      if (arr[j] > arr[j + 1]) {
-        temp = arr[j];
-        arr[j] = arr[j + 1];
-        arr[j + 1] = temp;
-      }
-    }
-
-    i--;
-  }
-
-  return arr;
-} // n个数，外层需要经过 n - 1轮
-// 内层需两两比较， 一圈过后，可确认一个最值。 比较次数为： 剩下未排序数个数 - 1,以此循环。
-
-
 function sortK(arr) {
   if (arr.length <= 1) {
     return arr;
@@ -165,62 +140,6 @@ function sortK(arr) {
 
   return sortK(leftArr).concat(tag, sortK(rightArr));
 }
-
-function sortC(arr) {
-  for (var j = 1; j < arr.length; j++) {
-    var key = arr[j];
-    var orderlyNum = j - 1; // 有序数组下标最大值即为key值前一项
-
-    while (arr[orderlyNum] > key && orderlyNum > -1) {
-      arr[orderlyNum + 1] = arr[orderlyNum];
-      orderlyNum--;
-    }
-
-    arr[orderlyNum + 1] = key; //  此步是用于完全有序的数组
-  }
-
-  return arr;
-} // 是否为有效的括号
-
-
-function validBrackets(val) {
-  var result = [];
-  var temp = val.split(''); // 奇数立即返回
-
-  if (temp.length % 2 === 1) {
-    return false;
-  }
-
-  temp.forEach(function (item, index) {
-    if (item === '(') {
-      result.push(item);
-    } else {
-      result.pop();
-    }
-  });
-  return result.length === 0;
-} // 多种组合的括号是否为有效的括号
-
-
-function mulValidBrackets(val) {
-  var result = [];
-  var temp = val.split('');
-
-  if (temp.length % 2 === 1) {
-    return false;
-  }
-
-  temp.forEach(function (item) {
-    if (item === '(' || item === '{' || item === '[') {
-      result.push(item);
-    } else if (result[result.length - 1] === '[' && item === ']' || result[result.length - 1] === '{' && item === '}' || result[result.length - 1] === '(' && item === ')') {
-      result.pop();
-    }
-  });
-  return result.length === 0;
-}
-
-console.log(1, mulValidBrackets('([]){}'));
 },{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -249,7 +168,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61099" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52449" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

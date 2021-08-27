@@ -1,18 +1,43 @@
-let arrResult = []
-// 获得数组原型
-const ArrayProto = Array.prototype
-const arrayMethods = Object.create(ArrayProto)
-// 重写以下函数
-const methodsToPatch = [
-  'push'
-]
-methodsToPatch.forEach((method) => {
-  // 缓存原生函数
-  ArrayProto[method] = function() {
-    console.log('视图更新')
-    ArrayProto[method].call(this, ...arguments) 
+function testFn() {
+  console.log('触发')
+}
+// function commonFn(value) {
+//   let time = null
+//   return function() {
+//     if (!time) {
+//       time = setTimeout(() => {
+//         testFn()
+//         time = null;
+//       }, value);
+//     }
+//   }
+// }
+
+// let a = commonFn(4000)
+// setTimeout(() => {
+//   a()
+// }, 500)
+// setTimeout(() => {
+//   a()
+// }, 1000)
+// setTimeout(() => {
+//   a()
+//   a()
+//   a()
+// }, 5000)
+
+function throtte(func, time){
+  let activeTime = 0;
+  return () => {
+    const current = Date.now();
+    if(current - activeTime > time) {
+      func()
+      activeTime = Date.now();
+    }
   }
-})
-arrResult.__proto__ = ArrayProto
-arrResult.push(1)
-console.log(arrResult)
+}
+let init = throtte(testFn, 5000)
+init()
+setTimeout(() =>{
+  init()
+}, 1000)
