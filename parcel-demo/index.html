@@ -30,7 +30,6 @@
           </el-form-item>
           <el-form-item>
             <el-button type="primary" @click="onSubmit">开始轮播</el-button>
-            <el-button type="primary" @click="onSubmit1">开始轮播</el-button>
           </el-form-item>
         </el-form>
       </div>
@@ -249,9 +248,10 @@
         },
         methods: {
           onSubmit() {
+            let self = this
             axios.get('https://api.github.com/users/liuwenzhuang/repos').then(function (response) {
-              this.tableData = response.data
-              console.log(1, this.tableData);
+              self.tableData = response.data
+              console.log(1, this.tableData, this);
             }).catch(function (error) {
               console.log(error);
             });
@@ -270,9 +270,6 @@
             // temp().then((res) => {
             //   console.log(23, res)
             // })
-          },
-          onSubmit1() {
-            console.log(2, this.tableData);
           }
         }
       })
