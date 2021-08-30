@@ -2,6 +2,7 @@
   <div class="home">
     home
     <yfDialog/>
+    <yfLoading/>
   </div>
 </template>
 

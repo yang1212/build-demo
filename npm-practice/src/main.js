@@ -1,12 +1,13 @@
 import Vue from 'vue'
-import navUI from 'npm-nav-ui' // 暂不可按需引入
+import { yfDialog, yfLoading} from 'npm-nav-ui'
 import App from './App.vue'
 import router from './router'
 import store from './store'
 import './registerServiceWorker'
 
 Vue.config.productionTip = false
-Vue.use(navUI)
+Vue.use(yfDialog)
+Vue.use(yfLoading)
 
 new Vue({
   router,
