@@ -12,114 +12,129 @@
   <body>
     <div id="app">
       <div class="header">
-        <el-form :inline="true" :model="formData" class="demo-form-inline" style="padding: 10px 0 0 10px">
-          <el-form-item label="工艺路径">
+        <el-form :inline="true" :model="formData" class="demo-form-inline">
+          <el-form-item label="工艺路径" size="small">
             <el-select v-model="formData.processPath">
               <el-option label="区域一" value="shanghai"></el-option>
               <el-option label="区域二" value="beijing"></el-option>
             </el-select>
           </el-form-item>
-          <el-form-item label="工序">
+          <el-form-item label="工序" size="small">
             <el-select v-model="formData.process">
               <el-option label="区域一" value="shanghai"></el-option>
               <el-option label="区域二" value="beijing"></el-option>
             </el-select>
           </el-form-item>
-          <el-form-item label="轮播间隔(秒)">
+          <el-form-item label="轮播间隔(秒)" size="small">
             <el-input v-model="formData.carouselInterval"></el-input>
           </el-form-item>
           <el-form-item>
-            <el-button type="primary" @click="onSubmit">开始轮播</el-button>
+            <el-button type="primary" @click="onSubmit" size="small" class="submit-btn">开始轮播</el-button>
           </el-form-item>
         </el-form>
       </div>
-      <div class="content">
-        <div class="panel-top">
-          <div class="left1">
-            <h3 class="text-center common-text">生产进度</h3>
-            <el-progress type="circle" :percentage="25" :width='180' class="progress-box"></el-progress>
-            <div class="progress-detail">
-              <p class="box1">
-                <span>今日计划平方</span>
-                <span style="color: #e87f8d;font-size: 30px;">182.2方</span>
-              </p>
-              <p class="box1">
-                <span>今日完成平方</span>
-                <span style="color: #fefe00;font-size: 30px;">98方</span>
-              </p>
+      <div style="position: relative;">
+        <div class="panel-title">
+            <img class="panel-title-img" src="./1.png" />
+            <h2 class="panel-title-h2">排产进度看板</h2>
+            <div style="position: absolute;top:0;right: 10px">
+                <span class="common-text" style="font-size: 23px;margin-right: 60px;">14:08:54</span>
+                <span style="display: inline-block;width: 110px;line-height: 18px;top: 7px;position: relative;">
+                    <span class="common-text" style="display: inline-block;">2021年9月3日</span>
+                    <span class="common-text" style="display: inline-block;">星期五</span>
+                </span>
             </div>
-          </div>
-          <div class="right1">
-            <h3 class="text-center common-text">今日未完成任务</h3>
-            <el-table
-              class="tableForm"
-              :data="tableData"
-              height="324"
-              border
-             >
-              <el-table-column type="index" label="序号" width="50"></el-table-column>
-              <el-table-column 
-                v-for="(item, index) in column1" 
-                show-overflow-tooltip
-                :key="index"
-                :prop="item.prop" 
-                :label="item.label" 
-                :width="item.width"
-              >
-                <template slot-scope="scope">
-                  <span v-if="item.prop === 'propDeac1'" :class="{'status-1': scope.row.prop1 === 'ing', 'status-2': scope.row.prop1 === 'no'}">{{scope.row.propDeac1}}</span>
-                  <span v-else-if="item.prop === 'emergec'" :class="{'status-3': scope.row.prop1 === 'ing'}">{{scope.row.value}}</span>
-                  <span v-else>{{scope.row[item.prop]}}</span>
-                </template>
-              </el-table-column>
-            </el-table>
-            <p class="plan-num"><span class="common-text">任务数：</span><span class="red-color-text">4</span></p>
+        </div>
+      </div>  
+      <div class="panel-top">
+        <div class="left1 fixed-height">
+          <h3 class="text-center common-text">生产进度</h3>
+          <el-progress type="circle" :percentage="25" :width='180' class="progress-box"></el-progress>
+          <div class="progress-detail">
+            <p class="box1">
+              <span>今日计划平方</span>
+              <span style="color: #e87f8d;font-size: 30px;">182.2方</span>
+            </p>
+            <p class="box1">
+              <span>今日完成平方</span>
+              <span style="color: #fefe00;font-size: 30px;">98方</span>
+            </p>
           </div>
         </div>
-        <div class="panel-bottom">
-          <div class="left1">
-            <h3 class="text-center common-text">排行榜</h3>
-            <el-table
-              class="tableForm"
-              :data="tableData"
-              height="289"
-              border
-             >
-              <el-table-column 
-                v-for="(item, index) in column2" 
-                show-overflow-tooltip
-                :key="index"
-                :prop="item.prop" 
-                :label="item.label" 
-                :width="item.width"
-              >
-              </el-table-column>
-            </el-table>
-          </div>
-          <div class="right1">
-            <h3 class="text-center common-text">今日完成任务</h3>
-            <el-table
-              class="tableForm"
-              :data="tableData"
-              height="304"
-              border
-             >
-              <el-table-column type="index" label="序号" width="50"></el-table-column>
-              <el-table-column 
-                v-for="(item, index) in column1" 
-                show-overflow-tooltip
-                :key="index"
-                :prop="item.prop" 
-                :label="item.label" 
-                :width="item.width"
-              >
-                <template slot-scope="scope">
-                  <span v-if="item.prop === 'propDeac1'" :class="{'status-4': scope.row.prop1 === 'ing'}">{{scope.row.propDeac1}}</span>
-                  <span v-else>{{scope.row[item.prop]}}</span>
-                </template>
-              </el-table-column>
-            </el-table>
-          </div>  
+        <div class="right1 fixed-height">
+          <h3 class="text-center common-text">今日未完成任务</h3>
+          <el-table
+            class="tableForm"
+            :data="tableData"
+            height="240"
+            style="width: 100%;"
+            border
+           >
+            <el-table-column type="index" label="序号" width="50"></el-table-column>
+            <el-table-column 
+              v-for="(item, index) in column1" 
+              show-overflow-tooltip
+              :key="index"
+              :prop="item.prop" 
+              :label="item.label" 
+              :width="item.width"
+            >
+              <template slot-scope="scope">
+                <span v-if="item.prop === 'propDeac1'" :class="{'status-1': scope.row.prop1 === 'ing', 'status-2': scope.row.prop1 === 'no'}">{{scope.row.propDeac1}}</span>
+                <span v-else-if="item.prop === 'emergec'" :class="{'status-3': scope.row.prop1 === 'ing'}">{{scope.row.value}}</span>
+                <span v-else>{{scope.row[item.prop]}}</span>
+              </template>
+            </el-table-column>
+          </el-table>
+          <p class="pagination-box">
+            <span v-for="(item, index) in totalPage" :class="{'current-page': curPage === item}" class="single-box">{{item}}</span>
+          </p>
+          <p class="plan-num"><span class="common-text">任务数：</span><span class="red-color-text">4</span></p>
+        </div>
+      </div>
+      <div class="panel-bottom">
+        <div class="left1">
+          <h3 class="text-center common-text">排行榜</h3>
+          <el-table
+            class="tableForm"
+            :data="tableData"
+            height="240"
+            border
+           >
+            <el-table-column 
+              v-for="(item, index) in column2" 
+              show-overflow-tooltip
+              :key="index"
+              :prop="item.prop" 
+              :label="item.label" 
+              :width="item.width"
+            >
+            </el-table-column>
+          </el-table>
+        </div>
+        <div class="right1">
+          <h3 class="text-center common-text">今日完成任务</h3>
+          <el-table
+            class="tableForm"
+            :data="tableData"
+            height="240"
+            border
+           >
+            <el-table-column type="index" label="序号" width="50"></el-table-column>
+            <el-table-column 
+              v-for="(item, index) in column3" 
+              show-overflow-tooltip
+              :key="index"
+              :prop="item.prop" 
+              :label="item.label" 
+              :width="item.width"
+            >
+              <template slot-scope="scope">
+                <span v-if="item.prop === 'propDeac1'" :class="{'status-4': scope.row.prop1 === 'ing'}">{{scope.row.propDeac1}}</span>
+                <span v-else>{{scope.row[item.prop]}}</span>
+              </template>
+            </el-table-column>
+          </el-table>
         </div>
       </div>
     </div>
@@ -132,6 +147,8 @@
       new Vue({
         el: "#app",
         data: {
+          totalPage: 4,
+          curPage: 1,
           formData: {
             processPath: '', // 工艺路径
             process: '', // 工序
@@ -174,13 +191,80 @@
               'prop': 'value'
             },
             {
-              'label': '板件数',
+              'label': '紧急情况',
+              'width': '',
+              'prop': 'emergec'
+            }
+          ],
+          column3: [
+            {
+              'label': '状态',
+              'width': '120',
+              'prop': 'propDeac1'
+            },
+            {
+              'label': '任务号',
+              'width': '150',
+              'prop': 'value'
+            },
+            {
+              'label': '工艺',
               'width': '120',
               'prop': 'value'
             },
             {
-              'label': '二次加工部件',
+              'label': '负责人',
+              'width': '120',
+              'prop': 'value'
+            },
+            {
+              'label': '开始时间',
               'width': '150',
+              'prop': 'value'
+            },
+            {
+              'label': '平方数',
+              'width': '120',
+              'prop': 'value'
+            },
+            {
+              'label': '收货人',
+              'width': '120',
+              'prop': 'value'
+            },
+            {
+              'label': '状态',
+              'width': '120',
+              'prop': 'propDeac1'
+            },
+            {
+              'label': '任务号',
+              'width': '150',
+              'prop': 'value'
+            },
+            {
+              'label': '工艺',
+              'width': '120',
+              'prop': 'value'
+            },
+            {
+              'label': '负责人',
+              'width': '120',
+              'prop': 'value'
+            },
+            {
+              'label': '开始时间',
+              'width': '150',
+              'prop': 'value'
+            },
+            {
+              'label': '平方数',
+              'width': '120',
+              'prop': 'value'
+            },
+            {
+              'label': '收货人',
+              'width': '220',
               'prop': 'value'
             },
             {
@@ -206,10 +290,10 @@
               'prop': 'value'
             },
             {
-              'label': '每平方耗时(分钟)',
-              'width': '140',
+              'label': '姓名',
+              'width': '',
               'prop': 'value'
-            }
+            },
           ], 
           // Mock
           tableData: [{
@@ -241,6 +325,24 @@
               prop1: 'no',
               value: 'apple',
               index: 5
+            },
+            {
+              propDeac1: '未开始',
+              prop1: 'no', 
+              value: 'apple',
+              index: 3
+            },
+            {
+              propDeac1: '未开始',
+              prop1: 'no',
+              value: 'orange',
+              index: 4
+            },
+            {
+              propDeac1: 'yangfu',
+              prop1: 'no',
+              value: 'apple',
+              index: 5
             }
           ],
         },
@@ -248,15 +350,28 @@
         },
         methods: {
           onSubmit() {
-            this.tableData = []
-            axios.get('https://api.github.com/users/liuwenzhuang/repos')
-            .then(function (response) {
-              console.log(response);
-              this.tableData = []
-            })
-            .catch(function (error) {
+            let self = this
+            axios.get('https://api.github.com/users/liuwenzhuang/repos').then(function (response) {
+              self.tableData = response.data
+              console.log(1, this.tableData, this);
+            }).catch(function (error) {
               console.log(error);
             });
+            console.log(3, this.tableData);
+            // function temp() {
+            //   return new Promise((resolve, reject) => {
+            //     axios.get('https://api.github.com/users/liuwenzhuang/repos').then(function (response) {
+            //       console.log(1, response.data)
+            //       resolve(response.data)
+            //     }).catch(function (error) {
+            //       console.log(error);
+            //     });
+            //     resolve()
+            //   })
+            // }
+            // temp().then((res) => {
+            //   console.log(23, res)
+            // })
           }
         }
       })

@@ -43,21 +43,6 @@ let obj2 = {
   }
 }
 
-function dfsFn(root) {
-  let tag = false
-  const traver = ((root, val) => {
-    if (!root) { return }
-    if (root. left === null && root.right === null) {
-      console.log('aaa', val)
-      return true
-    }
-    root.left && traver(root.left, val + root.left.val)
-    root.right && traver(root.right, val + root.right.val)
-  })
-  traver(root, root.val)
-  return tag
-}
-dfsFn(obj2)
 // 深度优先：---数据格式obj1（基于递归）
 function dfsTraverse1(root) {
   let arr = []
@@ -220,11 +205,13 @@ function allTree(root) {
   }
   return arr
 }
+// 相等
 function isSameTree(p, q) {
   if (!p && !q) { return true }
   if ((p && !q) || (!p && q) || (p.val !== q.val)) { return false }
   return isSameTree(p.left, q.left) && isSameTree(p.right, q.right)
 }
+// 对称
 function symmetryTree(root) {
   if (!root) { return true }
   let p = root.left
@@ -235,58 +222,4 @@ function symmetryTree(root) {
     return travseT(p.left, q.right) && travseT(p.right, q.left)
   }
   return travseT(p, q)
-}
-// 递归
-function recursionDom(root) {
-  const travse = (root) => {
-    console.log(root.nodeName)
-    if (root.children.length) {
-      for (let i = 0; i < root.children.length; i++) {
-        travse(root.children[i])
-      }
-    }
-  }
-  travse(root)
-}
-
-// 栈
-function stackDom(root) {
-  let stack = [root]
-  while(stack.length) {
-    let temp = stack.pop()
-    console.log(temp.nodeName)
-    if (temp.children.length) {
-      for (let i = temp.children.length - 1; i > -1; i--) {
-        stack.push(temp.children[i])
-      }
-    }
-  }
-}
-
-function watchArray() {
-  const arrType = Array.prototype
-  const obj = Object.create(arrType)
-  let arrayFn = [
-    'push',
-    'pop',
-    'shift',
-    'unshift',
-    'splice',
-    'sort',
-    'reverse'
-  ]
-  console.log(obj)
-  arrayFn.forEach((method) => {
-    const original = arrType[method]
-    console.log(original)
-    Object.defineProperty(obj, method, {
-      value: function mutator (...args) {
-        console.log(method) // 打印数组方法
-        return original.apply(this, args)
-      },
-      enumerable: false,
-      writable: true,
-      configurable: true
-    })
-  })
 }

@@ -1,17 +1,35 @@
 <template>
   <div>
     <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
+    {{user}}1{{count}}
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent, reactive, onMounted, ref } from 'vue'
 import HelloWorld from './components/HelloWorld.vue'
 
 export default defineComponent({
   name: 'App',
   components: {
     HelloWorld
+  },
+  setup() {
+    const count = ref({
+      name: 'yf',
+      age: 88
+    })
+    setTimeout(() => {
+      user.age = 19
+    }, 2000)
+    const user = reactive({
+      name: 'yf',
+      age: 88
+    })
+    return {
+      user,
+      count
+    }
   }
 })
 </script>

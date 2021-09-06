@@ -1,7 +1,3 @@
-'use strict';
-
-Object.defineProperty(exports, '__esModule', { value: true });
-
 function fixedRefactor(value, n) {
   let val;
   if (!n) {
@@ -12,4 +8,4 @@ function fixedRefactor(value, n) {
   return val
 }
 
-exports.fixedRefactor = fixedRefactor;
+export { fixedRefactor };
