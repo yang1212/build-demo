@@ -1,11 +1,14 @@
-function fixedRefactor(value, n) {
-  let val;
-  if (!n) {
-    val = Math.round(value);
-  } else {
-    val = Math.round(val * Math.pow(10, n)) / Math.pow(10, n);
-  }
-  return val
+function add1(a, b) {
+  return a + b
 }
 
-export { fixedRefactor };
+function add(a, b) {
+  return a + b
+}
+function mul(a, b) {
+  return a * b
+}
+let sum = add1(1, 4);
+console.log(sum);
+
+export { add, mul };
