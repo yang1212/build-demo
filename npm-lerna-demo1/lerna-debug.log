@@ -1,0 +1,5 @@
+43 error Error: Command failed: git push --follow-tags --no-verify --atomic origin master
+43 error fatal: unable to access 'https://github.com/yang1212/webpack-about.git/': Failed to connect to github.com port 443: Timed out
+43 error
+43 error     at makeError (E:\webpack-about\npm-lerna-demo1\node_modules\execa\index.js:174:9)
+43 error     at E:\webpack-about\npm-lerna-demo1\node_modules\execa\index.js:278:16
