@@ -124,4 +124,4 @@ npm存放地址
 package.json 配置repository地址指向github
 
 
-Lerna 无法发布私有的 packcage
+Lerna 无法发布私有的 package, 是对于子包而言， 为了防止其被发布到npm上，我们在其package.json中设置"private"=true。
