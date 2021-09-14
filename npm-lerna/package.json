@@ -1,5 +1,5 @@
 {
-  "name": "root",
+  "name": "rootYfTest",
   "version": "1.0.0",
   "devDependencies": {
     "lerna": "^3.18.1"
