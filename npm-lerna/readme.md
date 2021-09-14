@@ -56,12 +56,12 @@ lerna init
 
 ### 新增包(基于packages目录)
 ```
-mkdir module1 && cd module1
+mkdir module1 && cd module1(包名不要和npm中存在的包重复~)
 npm init -y
 
 ```
 
-启用 yarn Workspaces
+### 启用 yarn Workspaces
 
 将依赖关系“提升”到最顶层的 Lerna 项目级别的node_modules目录, 减少开发和构建环境中对大量包副本的时间和空间需求
 ```
@@ -78,10 +78,17 @@ lerna.json 添加
 "npmClient": "yarn"
 ```
 
+安装yarn
+npm install yarn -g
+
+切换镜像源
+yarn config set registry https://registry.npm.taobao.org
+
+执行命令
+yarn install
+
 
 你可能遇到： 
-
-[yarn安装慢](https://juejin.cn/post/6844903574216900621)
 
 [verdaccio搭建私有npm库](https://segmentfault.com/a/1190000021612560)
 
