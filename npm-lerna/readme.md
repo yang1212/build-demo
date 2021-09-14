@@ -79,13 +79,26 @@ lerna.json 添加
 ```
 
 安装yarn
+
 npm install yarn -g
 
 切换镜像源
+
 yarn config set registry https://registry.npm.taobao.org
 
 执行命令
+
 yarn install
+
+执行npm publish不允许有未提交代码
+
+需要一个.gitignore文件
+
+### 发布包
+npm login
+
+npm publish
+
 
 
 你可能遇到： 
@@ -95,6 +108,7 @@ yarn install
 npm publish 报错 “code EPUBLISHCONFLICT”
 * 包名不要有-符号
 * 也可能是最外层package.json中的name有存在重名情况
+
 
 lerna.json 中的version:
 
