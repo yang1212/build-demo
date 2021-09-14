@@ -34,4 +34,8 @@ lerna.json 添加
 ```
 
 
-你可能遇到： [yarn安装慢](https://juejin.cn/post/6844903574216900621)
+你可能遇到： 
+
+[yarn安装慢](https://juejin.cn/post/6844903574216900621)
+
+[verdaccio搭建私有npm库](https://segmentfault.com/a/1190000021612560)
