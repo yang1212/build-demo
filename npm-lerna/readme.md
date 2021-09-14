@@ -42,9 +42,6 @@
 
 
 
-
-
-
 ### 初始化demo
 ```
 npm install lerna@3.18.1 -g  (3.0.0版本，执行lerna init没反应，也不知道为啥~)
@@ -58,7 +55,6 @@ lerna init
 ```
 mkdir module1 && cd module1(包名不要和npm中存在的包重复~)
 npm init -y
-
 ```
 
 ### 启用 yarn Workspaces
@@ -95,13 +91,24 @@ yarn install
 需要一个.gitignore文件
 
 ### 发布包
+
 npm login
 
 npm publish
 
+### 两种模式
 
+Fixed/Locked mode (默认模式) -适用包之间关联性比较大的，如babel, vue
 
-你可能遇到： 
+在发布的时候, 对于改动的包会与lerna.json中的version保持一致。
+
+独立模式
+
+lerna init --independent(初始化)
+
+每个 package 都可以有自己的版本号。版本号维护在各自 package.json 的 version 中
+
+Others： 
 
 [verdaccio搭建私有npm库](https://segmentfault.com/a/1190000021612560)
 
@@ -110,6 +117,11 @@ npm publish 报错 “code EPUBLISHCONFLICT”
 * 也可能是最外层package.json中的name有存在重名情况
 
 
-lerna.json 中的version:
+独立模式： 自动更新， 且子模块随之自动更新
 
-// 独立模式： 自动更新， 且子模块随之自动更新
+npm存放地址
+
+package.json 配置repository地址指向github
+
+
+Lerna 无法发布私有的 packcage

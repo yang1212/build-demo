@@ -4,5 +4,15 @@
   ],
   "version": "1.2.2",
   "useWorkspaces": true,
-  "npmClient": "yarn"
+  "npmClient": "yarn",
+  "command": {
+    "publish": {
+      "registry": "https://registry.npmjs.org"
+    }
+  },
+  "ignoreChanges": [
+    "ignored-file",
+    "**/__tests__/**",
+    "**/*.md"
+  ]
 }
