@@ -2,7 +2,6 @@
   "name": "yangfumoduletest1",
   "version": "1.2.10",
   "description": "",
-  "private": true,
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -12,6 +11,5 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "gitHead": "5c1ad4455415b02ef72b73b2092e19e3e674ff1e"
+  "license": "ISC"
 }
