@@ -1,6 +1,6 @@
 {
-  "name": "lernayangfu",
-  "version": "1.0.0",
+  "name": "root",
+  "private": true,
   "devDependencies": {
     "lerna": "^3.18.1"
   },
