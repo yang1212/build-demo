@@ -2,7 +2,8 @@
   "name": "rollup-component-demo",
   "version": "2.0.0",
   "description": "",
-  "main": "./dist/index",
+  "main": "./dist/index-cjs.js",
+  "module": "./dist/index-es.js",
   "scripts": {
     "dev": "rollup -c rollup.config.dev.js -w",
     "build": "rollup -c rollup.config.pro.js"

@@ -21,4 +21,4 @@ var value = _.concat([1, 3], 4);
 console.log(sum, value);
 
 export { add, mul };
-//# sourceMappingURL=index.js.map
+//# sourceMappingURL=index-es.js.map

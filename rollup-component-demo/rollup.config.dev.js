@@ -6,12 +6,20 @@ import livereload from 'rollup-plugin-livereload'
 
 export default {
   input: 'src/index.js',
-  output: {
-    format: 'umd',
-    file: 'dist/index.js',
-    name: 'test',
-    sourcemap: true
-  },
+  output: [
+    {
+      format: 'es',
+      file: 'dist/index-es.js',
+      name: 'testEs',
+      sourcemap: true
+    },
+    {
+      format: 'cjs',
+      file: 'dist/index-cjs.js',
+      name: 'testCjs',
+      sourcemap: true
+    }
+  ],
   plugins: [
     resolve(),
     commonjs(),

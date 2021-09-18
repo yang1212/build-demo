@@ -94,5 +94,12 @@ rollup.js编译源码中的模块引用默认只支持 ES6+的模块方式import
 安装@rollup/plugin-node-resolve和@rollup/plugin-commonjs
 
 
+8、others
+
+不过我们实际开发并不会打包成umd格式的文件，因为umd格式的包文件很大。
+
+一般会分开打包一个cjs包和一个es包。然后把cjs包写进package.json的main属性，
+
+把es包写进package.json的module属性
 
 [来源](https://juejin.cn/post/6844904058394771470)
