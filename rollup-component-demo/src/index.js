@@ -4,11 +4,11 @@ import { add1 } from './common'
 function add(a, b) {
   return a + b
 }
-function mul(a, b) {
-  return a * b
+function testFn(a) {
+  return _.concat([1,3], a)
 }
 let sum = add1(1, 4)
-let value = _.concat([1,3], 4)
-console.log(sum, value)
+console.log(sum)
 
-export { add, mul }
+export { add, testFn }
+// 埋点相关SDK, 对接客服相关SDK, 对接支付的方案

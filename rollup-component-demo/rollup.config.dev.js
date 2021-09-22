@@ -32,6 +32,5 @@ export default {
       port: 9001,
       contentBase: ''
     })
-  ],
-  external: ['lodash']
+  ]
 }
