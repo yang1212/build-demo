@@ -13,7 +13,6 @@
     "typescript": "^4.0.2"
   },
   "dependencies": {
-    "rollup-npm-yf-utils": "^1.1.0",
-    "yangfumoduletest1": "^2.0.0"
+    "rollup-npm-yf-utils": "^1.3.0"
   }
 }

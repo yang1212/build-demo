@@ -1,12 +1,15 @@
 <template>
   <div>
     <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
-    {{user}}1{{count}}
+    user: {{user}} {{user.name}}
+    <br/>
+    count: {{count}}
+    <div @click="testFn">233</div>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent, reactive, onMounted, ref } from 'vue'
+import { defineComponent, reactive, ref } from 'vue'
 import HelloWorld from './components/HelloWorld.vue'
 
 export default defineComponent({
@@ -15,20 +18,22 @@ export default defineComponent({
     HelloWorld
   },
   setup() {
-    const count = ref({
-      name: 'yf',
-      age: 88
-    })
-    setTimeout(() => {
-      user.age = 19
-    }, 2000)
+    let count = ref([1,2,3])
     const user = reactive({
       name: 'yf',
       age: 88
     })
+    setTimeout(() => {
+      count.value.push(5)
+    }, 2000)
     return {
       user,
       count
+    }
+  },
+  methods: {
+    testFn() {
+      console.log(1)
     }
   }
 })
