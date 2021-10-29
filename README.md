@@ -48,7 +48,7 @@ react项目的demo案例，其中react-redux的使用基于hooks，组件是基�
 借用es6环境做测试
 
 
-### 2、other1_rollup-demo
+### [2、rollup-demo-yf](https://gitee.com/Tibooyang/rollup-demo-yf)
 
 rollup打包js类库, 相比于webpack。打包结果更加简约、清晰易懂
 
