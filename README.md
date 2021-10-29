@@ -51,3 +51,7 @@ react项目的demo案例，其中react-redux的使用基于hooks，组件是基�
 ### 2、other1_rollup-demo
 
 rollup打包js类库, 相比于webpack。打包结果更加简约、清晰易懂
+
+### [3、npm-lerna-demo](https://gitee.com/Tibooyang/npm-lerna-demo)
+
+用来管理有多个包的JS项目的工具
