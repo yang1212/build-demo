@@ -55,3 +55,7 @@ rollup打包js类库, 相比于webpack。打包结果更加简约、清晰易懂
 ### [3、npm-lerna-demo](https://gitee.com/Tibooyang/npm-lerna-demo)
 
 用来管理有多个包的JS项目的工具
+
+### 4、yarn
+
+yarn add eslint@^6.7.2 --dev
