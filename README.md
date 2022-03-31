@@ -13,7 +13,7 @@
 
 ### v3_vue2-cli3-prerender
 
-* vue-cli3: 预渲染
+* vue-cli3: 预渲染(利于SEO, 相对于SSR,改动相对轻量的折中方案)
 
 
 ### v4_vue3-vite-ts-demo
