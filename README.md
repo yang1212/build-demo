@@ -6,17 +6,17 @@
 vue-cli3：搭建的UI库Demo
 
 
-### 2、v1_vue2-cli2-webpack4
+### 2、v2_vue2-cli2-webpack4
 
 vue2-cli：脚手架初始化，webpack3升4
 
 
-### 3、v1_vue2-cli3-prerender
+### 3、v3_vue2-cli3-prerender
 
 预渲染
 
 
-### 4、v1_vue3-vite-ts-demo
+### 4、v4_vue3-vite-ts-demo
 
 测试vite咋用
 
