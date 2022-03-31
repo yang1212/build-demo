@@ -8,17 +8,17 @@
 
 ### v2_vue2-cli2-webpack4
 
-* vue2-cli：脚手架初始化，webpack3升4
+* vue-cli2：脚手架初始化，webpack3升4
 
 
 ### v3_vue2-cli3-prerender
 
-* 预渲染
+* vue-cli3: 预渲染
 
 
 ### v4_vue3-vite-ts-demo
 
-* 测试vite咋用
+* vite: 测试vite咋用
 
 
 ## React
