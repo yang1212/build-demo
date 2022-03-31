@@ -1,17 +1,22 @@
 <template>
   <div id="app">
+    <div @click="open">点击</div>
+    <yfDialog ref="dialogRef"/>
     <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import yfDialog from '@/yf-dialog'
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    yfDialog
+  },
+  methods: {
+    open() {
+      this.$refs.dialogRef.show()
+    }
   }
 }
 </script>

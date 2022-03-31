@@ -14,9 +14,9 @@ module.exports = {
   css: { extract: false },
   // 扩展 webpack 配置，使 packages 加入编译
   chainWebpack: config => {
-    // vue默认@指向src目录，这里要修正为examples，另外新增一个~指向packages
+    // vue默认@指向src目录，这里要修正为examples，另外新增一个@指向packages
     config.resolve.alias
-            .set('~', path.resolve('packages'));
+      .set('@', path.resolve('packages'));
     // lib是最终npm包打包好的地方，不需要eslint检查                
     config.module
       .rule('eslint')

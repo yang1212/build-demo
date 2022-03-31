@@ -11,7 +11,7 @@ export default {
   },
   data() {
     return {
-      showDialog: true
+      showDialog: false
     }
   },
   created() {},

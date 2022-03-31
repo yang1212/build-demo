@@ -16,7 +16,7 @@ npm install typescript --save-dev
 
 <br/>
 
-### 版本
+### 运行版本
 node: v16.0.0
 
 yarn: v1.22.17
