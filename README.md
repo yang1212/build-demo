@@ -1,27 +1,22 @@
 
 ## Vue
 
-### 1、vue0_vue-practice
-
-测试引入npm-nav-ui项目
-
-
-### 2、vue1_vue-npm-ui
+### 1、vue1_vue-npm-ui
 
 vue-cli3搭建的UI库Demo
 
 
-### 3、vue2_vue-cli2-webpack4-youhua
+### 2、vue2_vue-cli2-webpack4-youhua
 
 基于vue2-cli脚手架初始化，webpack3升4
 
 
-### 4、vue3_vue-cli3-prerender
+### 3、vue3_vue-cli3-prerender
 
 预渲染
 
 
-### 5、vue4_vue-vite-ts-demo
+### 4、vue4_vue-vite-ts-demo
 
 测试vite咋用
 
