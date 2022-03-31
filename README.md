@@ -1,22 +1,22 @@
 
 ## Vue
 
-### 1、v1_vue2-cli3-npm-ui
+### v1_vue2-cli3-npm-ui
 
 vue-cli3：搭建的UI库Demo
 
 
-### 2、v2_vue2-cli2-webpack4
+### v2_vue2-cli2-webpack4
 
 vue2-cli：脚手架初始化，webpack3升4
 
 
-### 3、v3_vue2-cli3-prerender
+### v3_vue2-cli3-prerender
 
 预渲染
 
 
-### 4、v4_vue3-vite-ts-demo
+### v4_vue3-vite-ts-demo
 
 测试vite咋用
 
