@@ -19,3 +19,12 @@ vue create vue-cli3-prerender  (不要使用驼峰式命名)
 ```
 按照官方文档按需配置即可
 ```
+
+### 5、[预渲染配置](https://learnku.com/articles/46637)
+
+<br/>
+
+### 运行版本
+node: v12.22.0
+
+yarn: v1.22.17

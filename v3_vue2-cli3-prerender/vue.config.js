@@ -5,7 +5,7 @@ const path = require('path')
 module.exports = {
   configureWebpack: config => {
     if (process.env.NODE_ENV === 'production') {
-      console.log(2222)
+      console.log(2222, config)
       return {
         plugins: [
           new PrerenderSPAPlugin({
