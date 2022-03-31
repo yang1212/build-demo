@@ -6,7 +6,7 @@ function sortK<T>(arr: T[]):T[] {
   let leftArr = []
   let rightArr = []
   arr.splice(Math.floor(arr.length / 2), 1)
-  for (let i = 0; i < arr.length - 1; i++) {
+  for (let i = 0; i < arr.length; i++) {
     if (tag > arr[i]) {
       leftArr.push(arr[i])
     } else {
@@ -15,3 +15,5 @@ function sortK<T>(arr: T[]):T[] {
   }
   return sortK(leftArr).concat(tag, sortK(rightArr))
 }
+
+console.log(sortK([2,1,1,3,1]))

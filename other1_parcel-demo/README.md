@@ -13,3 +13,11 @@ npm install typescript --save-dev
 ### 3、创建文件
 创建index.html, index.js即可使用
 
+
+<br/>
+
+### 版本
+node: v16.0.0
+
+yarn: v1.22.17
+
