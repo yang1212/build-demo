@@ -9,7 +9,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
-const terserPlugin = require('terser-webpack-plugin')
+const TerserPlugin = require('terser-webpack-plugin')
 
 const env = require('../config/prod.env')
 
@@ -115,15 +115,15 @@ const webpackConfig = merge(baseWebpackConfig, {
     ])
   ],
   optimization: {
-    // minimizer: [
-    //   new terserPlugin({
-    //     cache: true,
-    //     parallel: true, // 开启并行压缩，充分利用cpu
-    //     sourceMap: false
-    //   })
-    // ],
+    minimizer: [
+      new TerserPlugin({
+        cache: true,
+        parallel: true, // 开启并行压缩，充分利用cpu
+        sourceMap: false
+      })
+    ],
     splitChunks: {
-      chunks: 'async', 
+      chunks: 'async',
       minSize: 30000,
       maxSize: 0,
       minChunks: 1,
