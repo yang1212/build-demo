@@ -51,6 +51,6 @@
 
 * 用来管理有多个包的JS项目的工具
 
-### 4、yarn
+### 4、yarn 安装指定包
 
 yarn add eslint@^6.7.2 --dev
