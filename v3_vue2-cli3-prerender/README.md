@@ -28,7 +28,7 @@ vue create vue-cli3-prerender  (不要使用驼峰式命名)
 
 <br/>
 
-### 运行版本
+## 运行版本
 node: v12.22.0
 
 yarn: v1.22.17
