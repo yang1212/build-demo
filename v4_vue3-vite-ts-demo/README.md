@@ -131,6 +131,8 @@ module.exports = {
 
 ```
 
+<br/>
+
 ### 5、husky配置 
 
 1） husky, lint-staged安装
