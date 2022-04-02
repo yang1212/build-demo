@@ -120,13 +120,13 @@ module.exports = {
 ```javaScript
 { 
   "semi": false,
-	"eslintIntegration": true,
-	"singleQuote": true,
-	"endOfLine": "auto",
-	"tabWidth": 2,
-	"trailingComma": "none",
-	"bracketSpacing": true,
-	"arrowParens": "avoid"
+  "eslintIntegration": true,
+  "singleQuote": true,
+  "endOfLine": "auto",
+  "tabWidth": 2,
+  "trailingComma": "none",
+  "bracketSpacing": true,
+  "arrowParens": "avoid"
 }
 
 ```
