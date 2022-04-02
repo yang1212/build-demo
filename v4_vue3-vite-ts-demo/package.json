@@ -5,6 +5,17 @@
     "build": "vue-tsc --noEmit && vite build",
     "serve": "vite preview"
   },
+  "lint-staged": {
+    "src/**/*.{js,vue}": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "dependencies": {
     "vue": "^3.2.6"
   },
@@ -27,6 +38,8 @@
     "stylelint-config-recess-order": "^2.5.0",
     "stylelint-config-standard": "^22.0.0",
     "stylelint-order": "^4.1.0",
-    "stylelint-scss": "^3.21.0"
+    "stylelint-scss": "^3.21.0",
+    "husky": "^4.2.5",
+    "lint-staged": "7.2.0"
   }
 }

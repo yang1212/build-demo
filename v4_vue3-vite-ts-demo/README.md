@@ -131,6 +131,36 @@ module.exports = {
 
 ```
 
+### 5、husky配置 
+
+1） husky, lint-staged安装
+
+```javaScript
+"husky": "^4.2.5"
+"lint-staged": "7.2.0"
+```
+
+2）执行命令
+需基于包含.git的主目录执行，如在此demo中，需要/build-demo这一层执行
+
+```javaScript
+npx husky install
+```
+
+3）package.json配置
+```javaScript
+ "lint-staged": {
+    "src/**/*.{js,vue}": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  }
+```
 
 <br/>
 
