@@ -1,5 +1,5 @@
 <template>
-  <div>{{msg}}</div>
+  <div>{{ msg }}</div>
 </template>
 
 <script lang="ts">
@@ -21,7 +21,7 @@ export default defineComponent({
   },
   methods: {
     testFn() {
-      function sortA<T>(arr: T[]):T[] {
+      function sortA<T>(arr: T[]): T[] {
         return arr
       }
       sortA([])

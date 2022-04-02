@@ -1,9 +1,9 @@
 <template>
   <div>
     <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
-    user: {{user}} {{user.name}}
-    <br/>
-    count: {{count}}
+    user: {{ user }} {{ user.name }}
+    <br />
+    count: {{ count }}
     <div @click="testFn">233</div>
   </div>
 </template>
@@ -18,7 +18,7 @@ export default defineComponent({
     HelloWorld
   },
   setup() {
-    let count = ref([1,2,3])
+    let count = ref([1, 2, 3])
     const user = reactive({
       name: 'yf',
       age: 88
