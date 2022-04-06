@@ -25,6 +25,7 @@ prettier
 ```
 
 stylelint
+* js 和 vue 文件可以使用 eslint 校验，css 我们采用 stylelint 校验
 ```javaScript
 "stylelint": "^13.13.1",
 "stylelint-config-prettier": "^8.0.2",
