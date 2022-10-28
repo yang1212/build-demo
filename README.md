@@ -52,3 +52,5 @@
 ### 4、yarn 安装指定包
 
 yarn add eslint@^6.7.2 --dev
+
+### 5、对于 Vue 3.x 的项目，需要使用 Vue CLI v4.5 以上的版本
