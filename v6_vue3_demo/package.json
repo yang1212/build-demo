@@ -3,8 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "dev": "cross-env ENVIRONMENT=DEV vue-cli-service serve",
+    "build:sit": "cross-env ENVIRONMENT=SIT vue-cli-service build",
+    "build:prod": "cross-env ENVIRONMENT=PROD vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
@@ -13,7 +14,8 @@
     "vue": "^3.0.0",
     "vue-class-component": "^8.0.0-0",
     "vue-router": "^4.0.0-0",
-    "vuex": "^4.0.0-0"
+    "vuex": "^4.0.0-0",
+    "weixin-js-sdk": "^1.6.0"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^4.18.0",
@@ -29,6 +31,7 @@
     "@vue/eslint-config-typescript": "^7.0.0",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^7.0.0",
-    "typescript": "~4.1.5"
+    "typescript": "~4.1.5",
+    "cross-env": "^7.0.3"
   }
 }
