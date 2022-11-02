@@ -1,5 +1,9 @@
 <template>
   <div class="equipment-box">
+    <NavBar
+      title="设备详情"
+      not-back
+    ></NavBar>
     <img alt="" src="../static/img/banner.png" class="banner">
     <div class="content-box" v-if="isLogin">
       <p class="item-name">东校区-xx楼层</p>
@@ -18,9 +22,11 @@
 
 <script>
 import { getUrlParam } from '@/utils/index'
+import NavBar from '@/components/NavBar/index.vue'
 export default {
   name: 'equipmentStart',
   components: {
+    NavBar
   },
   data() {
     return {
@@ -29,24 +35,23 @@ export default {
   },
   created() {
     if (getUrlParam('code')) { // 用户信息授权回调后获取token
-      // 获取token
-    } else { // 用户信息授权取消待考虑进来
-      getUrlParam('state') ? '' : this.mockFn1()
+      // TO DO: 接口2获取token
+      this.$router.push(`/phoneBind`)
+    } else {
+      getUrlParam('state') ? '' : this.getDetailData()
     }
   },
   methods: {
     userAuthorization() {
       const appId = localStorage.getItem('userInfo').appId
       const redirectUrl = window.location.href
-      if (window.curEnv === 'wx' || window.curEnv === 'ali') {
-        window.targets.userAuthorization({
-          appId: appId,
-          redirectUrl: redirectUrl
-        })
-      }  
+      window.targets.userAuthorization({
+        appId: appId,
+        redirectUrl: redirectUrl
+      })
     },
-    mockFn1() {
-      // 登录处理(需判断token是否失效)
+    getDetailData() {
+      // TO DO: 接口1登录处理(通过此判断token是否失效)
       this.isLogin = true
       this.isLogin ? '' : this.userAuthorization() 
     }

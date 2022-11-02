@@ -4,7 +4,6 @@ module.exports = {
   lintOnSave: true, // 在保存时校验格式
   productionSourceMap: false, // 生产环境是否生成 SourceMap
   configureWebpack: (config) => {
-    console.log(111111111, config.mode)
     if (process.env.ENVIRONMENT === 'PROD') {
       // 为生产环境修改配置...
       config.mode = 'production'

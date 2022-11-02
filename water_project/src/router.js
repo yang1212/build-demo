@@ -15,5 +15,10 @@ export default new Router({
       name: 'equipmentDetail',
       component: () => import(/* webpackChunkName: "equipmentDetail" */ './views/equipmentDetail.vue')
     },
+    {
+      path: '/phoneBind',
+      name: 'phoneBind',
+      component: () => import(/* webpackChunkName: "phoneBind" */ './views/phoneBind.vue')
+    },
   ]
 })

@@ -13,6 +13,7 @@
 body {
   padding: 0;
   margin: 0;
+  background: #F7F8FA;
 }
 p {
   margin: 0;
