@@ -3,8 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "cross-env ENVIRONMENT=DEV vue-cli-service serve",
+    "dev": "cross-env ENVIRONMENT=LOC vue-cli-service serve",
+    "build:dev": "cross-env ENVIRONMENT=DEV vue-cli-service build",
     "build:sit": "cross-env ENVIRONMENT=SIT vue-cli-service build",
+    "build:uat": "cross-env ENVIRONMENT=UAT vue-cli-service build",
     "build:prod": "cross-env ENVIRONMENT=PROD vue-cli-service build",
     "lint": "vue-cli-service lint"
   },

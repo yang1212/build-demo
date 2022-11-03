@@ -1,5 +1,4 @@
 import axios from 'axios'
-// import { getUrlParam } from './index'
 
 export default class API {
   created(config) {
@@ -14,12 +13,12 @@ export default class API {
       //是否需要鉴权，默认为true
       let isAuthentication = config.isAuthentication === false ? false : true
       if (isAuthentication) {
-        config.headers['Authorization_Bar'] = JSON.parse(
-          localStorage.getItem('url_token'),
-        )
+        // config.headers['Authorization'] = JSON.parse(
+        //   localStorage.getItem('url_token'),
+        // )
+        config.headers['Authorization'] = 'Basic 15db2fb1df3df2dc1e41ed6381ec477b'
         return config
       } else {
-        // config.headers['Authorization_Merchant'] = getUrlParam('merchantId')
         return config
       }
     })
@@ -43,6 +42,6 @@ export default class API {
 }
 
 export const water = new API({
-  baseURL: '/gw/car-charging/member/api',
+  baseURL: '/',
 }).getInstance()
 

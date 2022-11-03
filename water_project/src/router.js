@@ -20,5 +20,10 @@ export default new Router({
       name: 'phoneBind',
       component: () => import(/* webpackChunkName: "phoneBind" */ './views/phoneBind.vue')
     },
+    {
+      path: '/recharge',
+      name: 'recharge',
+      component: () => import(/* webpackChunkName: "recharge" */ './views/recharge.vue')
+    },
   ]
 })

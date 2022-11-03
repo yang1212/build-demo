@@ -6,15 +6,15 @@
     ></NavBar>
     <img alt="" src="../static/img/banner.png" class="banner">
     <div class="content-box" v-if="isLogin">
-      <p class="item-name">东校区-xx楼层</p>
+      <p class="item-name">{{siteName}}</p>
       <div class="item-price">
-        <p>2元</p>
+        <p>{{balance}}元</p>
         <p>账号余额</p>
       </div>
-      <p class="item-btn">充值</p>
+      <p class="item-btn" @click="handleRecharge">充值</p>
       <div class="btn-group">
-        <p>启动</p>
-        <p>结束</p>
+        <p @click="handleStart" :class="{'btn-disable' : isStart }">启动</p>
+        <p @click="handleEnd" :class="{'btn-disable' : !isStart }">结束</p>
       </div>
     </div>
   </div>
@@ -23,6 +23,8 @@
 <script>
 import { getUrlParam } from '@/utils/index'
 import NavBar from '@/components/NavBar/index.vue'
+import { Toast } from 'vant'
+
 export default {
   name: 'equipmentStart',
   components: {
@@ -31,11 +33,16 @@ export default {
   data() {
     return {
       isLogin: false,
+      isStart: false,
+      siteName: '', // 场地名称
+      balance: '', // 账户余额
+      eid: '' // 项目ID
     }
   },
   created() {
     if (getUrlParam('code')) { // 用户信息授权回调后获取token
-      // TO DO: 接口2获取token
+      // TO DO: 接口2: 
+      // 老： 获取token、新跳转
       this.$router.push(`/phoneBind`)
     } else {
       getUrlParam('state') ? '' : this.getDetailData()
@@ -53,7 +60,61 @@ export default {
     getDetailData() {
       // TO DO: 接口1登录处理(通过此判断token是否失效)
       this.isLogin = true
-      this.isLogin ? '' : this.userAuthorization() 
+      if (this.isLogin) {
+        // 获取设备详情
+        this.getEquipmentDetail()
+        // 获取钱包详情
+        this.getBalanceDetail()
+      } else {
+        this.userAuthorization()
+      }
+    },
+    handleRecharge() {
+      this.$router.push(`/recharge?eid=${this.eid}`)
+    },
+    getEquipmentDetail() {
+      this.$api.equipmentDetail('8609360517851640').then((res) => {
+        const { code, data } = res
+        if (code === 0) {
+          if (data.length) {
+            this.eid = data[0].ab.eid
+          }
+          return
+        }
+        Toast(res.msg)
+      })
+    },
+    getBalanceDetail() {
+      this.$api.balanceDetail('8609360517851640').then((res) => {
+        const { code, data } = res
+        if (code === 0) {
+          this.balance = data.balance
+          return
+        }
+        Toast(res.msg)
+      })
+    },
+    handleStart() {
+      this.isStart = true
+      this.$api.startEquipment('8609360517851640').then((res) => {
+        const { code, data } = res
+        if (code === 0) {
+          console.log(1, data)
+          return
+        }
+        Toast(res.msg)
+      })
+    },
+    handleEnd() {
+      this.isStart = false
+      this.$api.endEquipment('8609360517851640').then((res) => {
+        const { code, data } = res
+        if (code === 0) {
+          console.log(1, data)
+          return
+        }
+        Toast(res.msg) 
+      })
     }
   }
 }
@@ -110,6 +171,9 @@ export default {
       p:nth-child(2) {
         flex: 1;
         margin-left: 10px;
+      }
+      .btn-disable {
+        background:#ccc;
       }
     }
   }

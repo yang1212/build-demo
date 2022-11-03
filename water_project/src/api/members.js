@@ -1,11 +1,8 @@
 import { water } from '@/utils/request.js'
 
-//用户信息
-const memberInfo = config =>
-  water.get('/member/member_info', {
-    ...config,
-    isAuthentication: true,
-  })
+//设备详情
+const equipmentDetail = config =>
+  water.get('/lst-ali', config)
 export default {
-  memberInfo,
+  equipmentDetail,
 }
