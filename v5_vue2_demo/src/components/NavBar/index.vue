@@ -44,7 +44,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="less" scoped>
 .nav-bar-wrapper {
   width: 100vw;
   /deep/ .van-nav-bar {

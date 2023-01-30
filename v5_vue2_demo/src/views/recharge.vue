@@ -68,7 +68,7 @@
   }
   </script>
   
-  <style lang="scss" scoped>
+  <style lang="less" scoped>
   .recharge-box {
     .recharge-content {
       margin: 15px;

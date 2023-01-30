@@ -78,7 +78,7 @@
   }
   </script>
   
-  <style lang="scss" scoped>
+  <style lang="less" scoped>
   .bind-box {
     .form-box {
       margin: 10% 0;

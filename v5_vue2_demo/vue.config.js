@@ -24,7 +24,7 @@ module.exports = {
     hotOnly: false,
     proxy: { // 设置代理
       '/': {
-        target: 'https://local.hentre.com',
+        target: 'https://xx.com',
         changeOrigin: true,
       },
     },
