@@ -1,24 +1,31 @@
-# v6_vue3_demo
 
-## Project setup
-```
-npm install
-```
+Vue-cli4 需要 Node.js v8.9 或更高版本 (推荐 v10 以上)
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+<br/>
 
-### Compiles and minifies for production
+## 版本
+当前运行版本:
 ```
-npm run build
+node: v12.0.0
 ```
 
-### Lints and fixes files
+<br/>
+
+## 🚀 操作步骤
+
+### 1、如存在旧版本：卸载掉旧版本  
+
 ```
-npm run lint
+npm uninstall vue-cli -g 
+```
+### 2、安装@vue/cli
+对于 Vue 3.x 的项目，需要使用 Vue CLI v4.5 以上的版本
+```
+npm install @vue/cli@4.5.0 -g
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### 3、创建项目
+```
+vue create v6_vue3_demo
+```
+
