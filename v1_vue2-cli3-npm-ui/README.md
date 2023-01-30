@@ -1,4 +1,14 @@
-UI包demo, 基于vue-cli3, node版本要大于v8.9 ~
+### UI包demo, 基于vue-cli3, node版本要大于v8.9 ~
+
+<br/>
+
+## 版本
+当前运行版本:
+```
+node: v16.0.0
+
+yarn: v1.22.17
+```
 
 <br/>
 
@@ -36,10 +46,3 @@ main属性记得配置：如 "main": "lib/npm-nav-ui.umd.min.js"
 
 <br>
 
-## 版本
-当前运行版本:
-```
-node: v16.0.0
-
-yarn: v1.22.17
-```
