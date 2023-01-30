@@ -1,25 +1,37 @@
 
-## Vue
+## vue3
 
-### [vue2-cli3-npm-ui](https://github.com/yang1212/build-demo/tree/master/v1_vue2-cli3-npm-ui)
+### 1、 [vue3-demo](https://github.com/yang1212/build-demo/tree/master/v6_vue3_demo)
+*  做实验
+
+### 2、[vue3-vite-ts-demo](https://github.com/yang1212/build-demo/tree/master/v4_vue3-vite-ts)
+
+* vite: 测试vite咋用
+
+
+<br/>
+
+## vue2
+
+### 1、[vue2-demo](https://github.com/yang1212/build-demo/tree/master/v5_vue2_demo)
+*  做实验
+
+
+### 2、[vue2-cli3-npm-ui](https://github.com/yang1212/build-demo/tree/master/v1_vue2-cli3-npm-ui)
 
 * vue-cli3：搭建的UI库Demo
 
-### [vue2-cli2-webpack4](https://github.com/yang1212/build-demo/tree/master/v2_vue2-cli2-webpack4)
 
-* vue-cli2：脚手架初始化，webpack3升4
-
-### [vue2-cli3-prerender](https://github.com/yang1212/build-demo/tree/master/v3_vue2-cli3-prerender)
+### 3、[vue2-cli3-prerender](https://github.com/yang1212/build-demo/tree/master/v3_vue2-cli3-prerender)
 
 * vue-cli3: 预渲染(利于SEO, 相对于SSR,改动相对轻量的折中方案)
 
 
-### [vue3-vite-ts-demo](https://github.com/yang1212/build-demo/tree/master/v4_vue3-vite-ts)
+### 4、[vue2-cli2-webpack4](https://github.com/yang1212/build-demo/tree/master/v2_vue2-cli2-webpack4)
 
-* vite: 测试vite咋用
+* vue-cli2：脚手架初始化，webpack3升4
 
-### [vue3-cli4](https://github.com/yang1212/build-demo/tree/master/v5_vue3)
-* vue-cli4: 初始化配置
+<br/>
 
 ## React
 
@@ -35,6 +47,8 @@
 
 * 基于Ant Design Pro + Umi
 
+
+<br/>
 
 ## Other
 
