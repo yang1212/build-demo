@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <div @click="open">点击</div>
+    <!-- 在项目内测试对应UI包组件 -->
     <yfDialog ref="dialogRef"/>
-    <img alt="Vue logo" src="./assets/logo.png">
   </div>
 </template>
 
