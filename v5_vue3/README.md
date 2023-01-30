@@ -26,6 +26,7 @@ npm install @vue/cli@4.5.0 -g
 
 ### 3、创建项目
 ```
-vue create v6_vue3_demo
+vue create v5_vue3
 ```
+
 
