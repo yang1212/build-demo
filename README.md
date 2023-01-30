@@ -1,13 +1,13 @@
 
 ## Vue
 
-### [vue2-cli2-webpack4](https://github.com/yang1212/build-demo/tree/master/v2_vue2-cli2-webpack4)
-
-* vue-cli2：脚手架初始化，webpack3升4
-
 ### [vue2-cli3-npm-ui](https://github.com/yang1212/build-demo/tree/master/v1_vue2-cli3-npm-ui)
 
 * vue-cli3：搭建的UI库Demo
+
+### [vue2-cli2-webpack4](https://github.com/yang1212/build-demo/tree/master/v2_vue2-cli2-webpack4)
+
+* vue-cli2：脚手架初始化，webpack3升4
 
 ### [vue2-cli3-prerender](https://github.com/yang1212/build-demo/tree/master/v3_vue2-cli3-prerender)
 
