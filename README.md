@@ -14,7 +14,7 @@
 * vue-cli3: 预渲染(利于SEO, 相对于SSR,改动相对轻量的折中方案)
 
 
-### [vue3-vite-ts-demo](https://github.com/yang1212/build-demo/tree/master/v4_vue3-vite-ts-demo)
+### [vue3-vite-ts-demo](https://github.com/yang1212/build-demo/tree/master/v4_vue3-vite-ts)
 
 * vite: 测试vite咋用
 
