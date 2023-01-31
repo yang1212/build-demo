@@ -65,6 +65,5 @@
 
 * 用来管理有多个包的JS项目的工具
 
-### 4、yarn 安装指定包
+### [4、初始化项目常用命令行](https://github.com/yang1212/build-demo/issues/111)
 
-yarn add eslint@^6.7.2 --dev
