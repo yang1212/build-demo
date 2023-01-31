@@ -57,13 +57,13 @@
 * 借用es6环境做测试
 
 
-### [2、rollup-demo-yf](https://gitee.com/Tibooyang/rollup-demo-yf)
+### 2、[rollup-demo-yf](https://gitee.com/Tibooyang/rollup-demo-yf)
 
 * rollup打包js类库, 相比于webpack。打包结果更加简约、清晰易懂
 
-### [3、npm-lerna-demo](https://gitee.com/Tibooyang/npm-lerna-demo)
+### 3、[npm-lerna-demo](https://gitee.com/Tibooyang/npm-lerna-demo)
 
 * 用来管理有多个包的JS项目的工具
 
-### [4、初始化项目常用命令行](https://github.com/yang1212/build-demo/issues/111)
+### 4、[初始化项目常用命令行](https://github.com/yang1212/build-demo/issues/111)
 
