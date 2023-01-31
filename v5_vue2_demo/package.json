@@ -21,10 +21,10 @@
     "weixin-js-sdk": "^1.6.0"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.1.1",
+    "@vue/cli-plugin-babel": "^3.12.1",
     "@vue/cli-plugin-eslint": "^3.1.5",
     "@vue/cli-plugin-pwa": "^3.1.2",
-    "@vue/cli-service": "^3.1.4",
+    "@vue/cli-service": "^5.0.8",
     "babel-eslint": "^10.0.1",
     "cross-env": "^7.0.3",
     "eslint": "^5.16.0",
