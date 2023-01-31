@@ -2,7 +2,7 @@
 ## vue3
 
 ### 1、 [vue3-demo](https://github.com/yang1212/build-demo/tree/master/v6_vue3_demo)
-*  做实验
+*  vue3环境做实验
 
 ### 2、[vue3-vite-ts-demo](https://github.com/yang1212/build-demo/tree/master/v4_vue3-vite-ts)
 
@@ -14,7 +14,7 @@
 ## vue2
 
 ### 1、[vue2-demo](https://github.com/yang1212/build-demo/tree/master/v5_vue2_demo)
-*  做实验
+*  vue2环境做实验
 
 
 ### 2、[vue2-cli3-npm-ui](https://github.com/yang1212/build-demo/tree/master/v1_vue2-cli3-npm-ui)
@@ -66,4 +66,6 @@
 * 用来管理有多个包的JS项目的工具
 
 ### 4、[初始化项目常用命令行](https://github.com/yang1212/build-demo/issues/111)
+
+<br/>
 
