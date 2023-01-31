@@ -7,27 +7,27 @@ import store from './store'
 import 'vant/lib/index.css'
 import api from './api'
 import './registerServiceWorker'
-import {
-  targets,
-  handleScript,
-  publicMethod,
-  handleEnvFn,
-} from './fitCross/index'
+// import {
+//   targets,
+//   handleScript,
+//   publicMethod,
+//   handleEnvFn,
+// } from './fitCross/index'
 
 Vue.config.productionTip = false
 Vue.prototype.$wx = wx
 Vue.prototype.$api = api
 
-window.targets = targets
-window.publicMethod = publicMethod
-window.curEnv = handleEnvFn()
+// window.targets = targets
+// window.publicMethod = publicMethod
+// window.curEnv = handleEnvFn()
 
 //项目初始化函数
-function initialization() {
-  handleScript()
-}
+// function initialization() {
+//   handleScript()
+// }
 
-initialization()
+// initialization()
 
 new Vue({
   el: '#app',

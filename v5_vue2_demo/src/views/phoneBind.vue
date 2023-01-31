@@ -78,14 +78,14 @@
   }
   </script>
   
-  <style lang="less" scoped>
+  <style lang="scss" scoped>
   .bind-box {
     .form-box {
       margin: 10% 0;
       width: 100%;
-      /deep/ .van-cell {
-        padding: 15px 16px;
-      }
+      // /deep/ .van-cell {
+      //   padding: 15px 16px;
+      // }
     }
   }
   </style>

@@ -44,22 +44,22 @@ export default {
 }
 </script>
 
-<style lang="less" scoped>
-.nav-bar-wrapper {
-  width: 100vw;
-  /deep/ .van-nav-bar {
-    background: #fff;
-  }
-  /deep/ .van-nav-bar__title {
-    color: #000;
-  }
-}
+<style lang="scss" scoped>
+// .nav-bar-wrapper {
+//   width: 100vw;
+//   /deep/ .van-nav-bar {
+//     background: #fff;
+//   }
+//   /deep/ .van-nav-bar__title {
+//     color: #000;
+//   }
+// }
 
-/deep/ .van-nav-bar .van-icon {
-  color: #000000;
-}
+// /deep/ .van-nav-bar .van-icon {
+//   color: #000000;
+// }
 
-/deep/ .van-hairline--bottom::after {
-  border-bottom-width: 0;
-}
+// /deep/ .van-hairline--bottom::after {
+//   border-bottom-width: 0;
+// }
 </style>
