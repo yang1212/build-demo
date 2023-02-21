@@ -1,10 +1,10 @@
 
 ## vue3
 
-### 1、 [vue3-demo](https://github.com/yang1212/build-demo/tree/master/1%E3%80%81Vue3/v6_vue3_demo)
+### 1、 [vue3-vueCli-ts](https://github.com/yang1212/build-demo/tree/master/1%E3%80%81Vue3/vue3-vueCli-ts)
 *  vue3环境做实验
 
-### 2、[vue3-vite-ts-demo](https://github.com/yang1212/build-demo/tree/master/1%E3%80%81Vue3/v4_vue3-vite-ts)
+### 2、[vue3-vite-ts](https://github.com/yang1212/build-demo/tree/master/1%E3%80%81Vue3/vue3-vite-ts)
 
 * vite: 测试vite咋用
 
