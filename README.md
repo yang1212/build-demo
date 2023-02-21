@@ -62,16 +62,16 @@
 
 ## Other
 
-### 1、[parcel-demo](https://github.com/yang1212/build-demo/tree/master/Other/other1_parcel-demo)
+### 1、[parcel-demo](https://github.com/yang1212/build-demo/tree/master/Other/parcel-demo)
 
 * 借用es6环境做测试
 
 
-### 2、[rollup-demo-yf](https://gitee.com/Tibooyang/rollup-demo-yf)
+### 2、[rollup-demo](https://github.com/yang1212/build-demo/tree/master/Other)
 
 * rollup打包js类库, 相比于webpack。打包结果更加简约、清晰易懂
 
-### 3、[npm-lerna-demo](https://gitee.com/Tibooyang/npm-lerna-demo)
+### 3、[lerna-demo](https://github.com/yang1212/build-demo/tree/master/Other/lerna-demo)
 
 * 用来管理有多个包的JS项目的工具
 
