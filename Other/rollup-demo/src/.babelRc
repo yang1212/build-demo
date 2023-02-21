@@ -1,0 +1,7 @@
+{
+  "presets": [
+    ["@babel/env", {
+      "modules": false // 设置false后，避免babel在rollup处理之前，将源码编译为commonJs，此时rollup无法进行相应操作
+    }]
+  ]
+}
