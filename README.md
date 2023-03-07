@@ -67,7 +67,7 @@
 * 借用es6环境做测试
 
 
-### 2、[rollup-demo](https://github.com/yang1212/build-demo/tree/master/Other)
+### 2、[rollup-demo](https://github.com/yang1212/build-demo/tree/master/Other/rollup-demo)
 
 * rollup打包js类库, 相比于webpack。打包结果更加简约、清晰易懂
 
