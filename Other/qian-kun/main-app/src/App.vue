@@ -1,8 +1,8 @@
 <template>
-  <div id="app">
-    <H2>主应用</H2>
-    <div @click="goPage">按钮</div>
-    <!-- 子应用容器 -->
+   <div id="app">
+    <h1>Main App</h1>
+    <router-link to="/subApp1">subApp1</router-link>
+    <router-view></router-view>
     <div id="subapp-container"></div>
   </div>
 </template>
@@ -12,9 +12,6 @@
 export default {
   name: 'HomeView',
   methods: {
-    goPage() {
-      this.$router.push('/about')
-    }
   }
 }
 </script>
