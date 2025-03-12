@@ -37,11 +37,11 @@
 
 ### 1、[default-demo](https://github.com/yang1212/build-demo/tree/master/3%E3%80%81React/react0_default-demo)
 
-* react项目的demo案例，其中react-redux的使用不基于hooks，用的旧模式
+* 使用react-redux：基于类组件
 
 ### 2、[redux-hooks](https://github.com/yang1212/build-demo/tree/master/3%E3%80%81React/react1_redux-hooks)
 
-* react项目的demo案例，其中react-redux的使用基于hooks，组件是基于function，而不是class
+* 使用react-redux：基于函数组件
 
 ### 3、[umi-ant-demo](https://github.com/yang1212/build-demo/tree/master/3%E3%80%81React/react2_umi-ant-demo)
 
