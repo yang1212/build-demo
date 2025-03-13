@@ -1,4 +1,5 @@
-react项目的demo案例，其中react-redux的使用基于hooks，组件是基于function，而不是class
+使用react-redux：基于函数组件
+
 
 ## 🚀 create-react-app创建步骤
 
